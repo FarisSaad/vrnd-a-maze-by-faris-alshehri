@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     // Create a boolean value called "opening" that can be checked in Update() 
     private bool opening = false;
 
+    // Sounds Variables
     public AudioClip doorLocked;
     public AudioClip doorOpened;
     public AudioSource player;
@@ -21,6 +22,7 @@ public class Door : MonoBehaviour
             // Animate the door raising up
             transform.Translate(0, 2.5f * Time.deltaTime, 0, Space.World);
 
+            // Checking to see of the has finished opening
             if (transform.position.y >= 9)
             {
                 opening = false;

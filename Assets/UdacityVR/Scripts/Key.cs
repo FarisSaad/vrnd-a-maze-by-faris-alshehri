@@ -8,6 +8,7 @@ public class Key : MonoBehaviour
     public GameObject KeyPoofPrefab;
     public Door door;
 
+    private bool keyCollected = false;
 
     void Update()
 	{
@@ -24,6 +25,7 @@ public class Key : MonoBehaviour
         door.Unlock();
 
         // Set the Key Collected Variable to true
+        keyCollected = true;
 
         // Destroy the key. Check the Unity documentation on how to use Destroy
         Destroy(gameObject);
